@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <title>RiskHub - Novedades</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS v5.3.2 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        />
+        <link rel="stylesheet" href="../css/styles.css">
+        <style>
+            /* Estilos específicos para la página de novedades */
+            body {
+                background-color: #1C1C1C;
+                color: #E0E0E0;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .navbar, footer {
+                background-color: #2F2F2F !important;
+            }
+
+            .section-title {
+                text-align: center;
+                margin-bottom: 2rem;
+                color: #D3D3D3;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            .news-article {
+                background-color: #2F2F2F;
+                border-radius: 5px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .news-article:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 0 15px #A9A9A9, 0 0 30px #808080, 0 0 45px #696969;
+            }
+
+            .news-article h5 {
+                color: #D3D3D3;
+                margin-bottom: 1rem;
+            }
+
+            .news-article p {
+                color: #E0E0E0;
+            }
+
+            .btn-read-more {
+                background-color: #5A5A5A;
+                border-color: #5A5A5A;
+                color: #D3D3D3;
+            }
+
+            .btn-read-more:hover {
+                background-color: #696969;
+                border-color: #696969;
+                color: #fff;
+            }
+
+            /* Estilos para el botón del consultor */
+            .btn-consultor {
+                background-color: #ADD8E6; /* Celeste Hielo */
+                border-color: #ADD8E6;
+                color: #1C1C1C;
+                font-size: 1.2rem;
+                padding: 0.75rem 1.5rem;
+                animation: pulse 2s infinite;
+                transition: transform 0.3s, background-color 0.3s;
+                border-radius: 50px; /* Botón más redondeado */
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .btn-consultor:hover {
+                transform: scale(1.1);
+                background-color: #87CEEB; /* Azul Cielo más intenso */
+            }
+
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+
+            /* Estilos para el chat */
+            #chat-container {
+                height: 400px;
+                overflow-y: scroll;
+                border: 1px solid #444;
+                padding: 1rem;
+                border-radius: 5px;
+                background-color: #2F2F2F;
+            }
+
+            #chat-container div {
+                margin-bottom: 1rem;
+            }
+
+            #chat-container strong {
+                color: #ADD8E6; /* Celeste Hielo para el consultor */
+            }
+
+            #chat-container span {
+                color: #E0E0E0;
+            }
+
+            /* Estilos para el input y botón */
+            .input-group input {
+                background-color: #3A3A3A;
+                border: 1px solid #555;
+                color: #E0E0E0;
+            }
+
+            .input-group input::placeholder {
+                color: #AAA;
+            }
+
+            .input-group .btn-primary {
+                background-color: #ADD8E6;
+                border-color: #ADD8E6;
+                color: #1C1C1C;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+
+            .input-group .btn-primary:hover {
+                background-color: #87CEEB;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../recursos/logo riskhub _ (1).png" alt="RiskHub" height="100px"width="100%" />
+                    </a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/servicios.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/metodologia.html">Metodología</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#partners">Partners</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="novedades.html">Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="concientizacion.html">Concientización</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-primary" href="#contacto">Contáctanos</a>
+                            </li>
+                        </ul>
+                        <a href="https://www.linkedin.com" target="_blank" class="text-light ms-3">
+                            <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
+                </div>
+            </nav><!-- Botón "Pruebe nuestro Consultor" -->
+            <div class="container-fluid text-end mt-2">
+                <button type="button" class="btn btn-consultor" data-bs-toggle="modal" data-bs-target="#consultorModal">
+                    Pruebe nuestro Consultor
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero text-center py-5">
+                <div class="container">
+                    <h1 class="display-4">Novedades</h1>
+                    <p class="lead">
+                        Mantente al día con las últimas noticias en ciberseguridad, inteligencia artificial y otros temas relevantes.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Sección de Noticias -->
+            <section class="py-5">
+                <div class="container">
+                    <h2 class="section-title">Últimas Noticias</h2>
+                    <div class="row">
+                        <!-- Artículo 1 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Tendencias de Inteligencia Artificial en 2024</h5>
+                                <p>
+                                    La inteligencia artificial continúa revolucionando múltiples sectores. En 2024, se espera una mayor integración de AI en la ciberseguridad, permitiendo detectar y prevenir amenazas de manera más eficiente.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal1">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 1 -->
+                        <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModal1Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal1Label">Tendencias de Inteligencia Artificial en 2024</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            En 2024, la inteligencia artificial seguirá avanzando a pasos agigantados, especialmente en el ámbito de la ciberseguridad. Las nuevas herramientas basadas en AI permitirán una detección más rápida y precisa de amenazas, automatizando respuestas y minimizando el tiempo de inactividad. Además, se desarrollarán algoritmos más sofisticados capaces de anticipar ataques antes de que ocurran, fortaleciendo la defensa proactiva de las organizaciones.
+                                        </p>
+                                        <p>
+                                            Otro aspecto clave será la ética en AI, con un enfoque en la transparencia y la responsabilidad para evitar sesgos y asegurar que las decisiones automatizadas sean justas y equitativas. Las empresas invertirán en formación y desarrollo para asegurar que su personal esté preparado para trabajar junto a estas tecnologías avanzadas.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artículo 2 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Brecha de Seguridad en Sistemas de Salud</h5>
+                                <p>
+                                    Un reciente ataque cibernético ha afectado a varios hospitales, exponiendo datos sensibles de pacientes. Este incidente subraya la importancia de fortalecer las medidas de seguridad en el sector de la salud.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal2">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 2 -->
+                        <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModal2Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal2Label">Brecha de Seguridad en Sistemas de Salud</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            El reciente ciberataque a varios hospitales ha revelado vulnerabilidades críticas en los sistemas de salud. Los atacantes lograron acceder a bases de datos sensibles, comprometiendo información personal y médica de miles de pacientes. Este evento destaca la necesidad urgente de implementar medidas de seguridad más robustas, incluyendo el cifrado avanzado de datos, autenticación multifactor y monitoreo continuo de redes.
+                                        </p>
+                                        <p>
+                                            Además, es esencial que el personal de salud reciba capacitación adecuada en ciberseguridad para reconocer y prevenir posibles amenazas. Las instituciones deben adoptar un enfoque proactivo, realizando auditorías regulares y actualizaciones de sus sistemas para mantenerse al día con las últimas tendencias en ciberataques.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artículo 3 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Avances en Criptografía Cuántica</h5>
+                                <p>
+                                    La criptografía cuántica promete un nivel de seguridad sin precedentes. Los últimos desarrollos han permitido mejorar la eficiencia y la implementación práctica de estos sistemas en redes empresariales.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal3">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 3 -->
+                        <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModal3Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal3Label">Avances en Criptografía Cuántica</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            La criptografía cuántica está revolucionando la seguridad de la información al ofrecer métodos inviolables de encriptación. Recientemente, se han logrado avances significativos en la eficiencia de estos sistemas, permitiendo su integración en infraestructuras empresariales sin comprometer el rendimiento. Estos desarrollos incluyen la reducción de la latencia en la transmisión de claves y la implementación de protocolos más robustos que garantizan la privacidad y la integridad de los datos.
+                                        </p>
+                                        <p>
+                                            Además, las empresas están comenzando a adoptar soluciones de criptografía cuántica para proteger sus comunicaciones internas y externas, anticipándose a la era post-cuántica donde las computadoras cuánticas podrían romper los sistemas de encriptación tradicionales. Este adelanto posiciona a las organizaciones a la vanguardia de la seguridad tecnológica, asegurando una protección definitiva contra futuras amenazas.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artículo 4 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Impacto de la AI en la Gestión de Bases de Datos</h5>
+                                <p>
+                                    La inteligencia artificial está transformando la forma en que gestionamos y optimizamos las bases de datos. Desde la automatización de tareas hasta la mejora en la seguridad de los datos, los beneficios son significativos.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal4">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 4 -->
+                        <div class="modal fade" id="newsModal4" tabindex="-1" aria-labelledby="newsModal4Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal4Label">Impacto de la AI en la Gestión de Bases de Datos</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            La integración de la inteligencia artificial en la gestión de bases de datos ha permitido una optimización sin precedentes. Los algoritmos de AI pueden analizar grandes volúmenes de datos en tiempo real, identificando patrones y anomalías que serían difíciles de detectar manualmente. Esto no solo mejora la eficiencia operativa, sino que también fortalece la seguridad al prever y mitigar posibles brechas de datos.
+                                        </p>
+                                        <p>
+                                            Además, la AI facilita la automatización de tareas rutinarias como la indexación, el backup y la recuperación de datos, liberando recursos humanos para enfocarse en actividades más estratégicas. La capacidad de predecir necesidades de almacenamiento y ajustar dinámicamente los recursos también contribuye a una gestión más sostenible y rentable de las bases de datos.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artículo 5 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Nuevas Normativas de Ciberseguridad en Europa</h5>
+                                <p>
+                                    La Unión Europea ha anunciado nuevas normativas para fortalecer la ciberseguridad en las empresas. Estas regulaciones buscan proteger mejor los datos y sistemas críticos frente a amenazas emergentes.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal5">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 5 -->
+                        <div class="modal fade" id="newsModal5" tabindex="-1" aria-labelledby="newsModal5Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal5Label">Nuevas Normativas de Ciberseguridad en Europa</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            En respuesta al aumento de ciberataques sofisticados, la Unión Europea ha implementado nuevas normativas destinadas a reforzar la ciberseguridad en todas las empresas que operan dentro de su territorio. Estas regulaciones obligan a las organizaciones a adoptar medidas más estrictas de protección de datos, realizar evaluaciones regulares de vulnerabilidad y reportar incidentes de seguridad en tiempos más cortos.
+                                        </p>
+                                        <p>
+                                            Además, se promueve la colaboración entre sectores público y privado para compartir información sobre amenazas y mejores prácticas. Las empresas que cumplan con estas normativas no solo estarán mejor protegidas, sino que también ganarán la confianza de sus clientes y socios comerciales, posicionándose como líderes en seguridad tecnológica.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Artículo 6 -->
+                        <div class="col-md-6">
+                            <div class="news-article">
+                                <h5>Implementación de AI en la Continuidad de Negocio</h5>
+                                <p>
+                                    La inteligencia artificial juega un papel crucial en la planificación y ejecución de la continuidad del negocio, permitiendo una respuesta más rápida y efectiva ante incidentes.
+                                </p>
+                                <a href="#" class="btn btn-read-more" data-bs-toggle="modal" data-bs-target="#newsModal6">Leer más</a>
+                            </div>
+                        </div>
+                        <!-- Modal para Artículo 6 -->
+                        <div class="modal fade" id="newsModal6" tabindex="-1" aria-labelledby="newsModal6Label" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content bg-dark text-light">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="newsModal6Label">Implementación de AI en la Continuidad de Negocio</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            La inteligencia artificial está transformando la continuidad del negocio al proporcionar herramientas que anticipan y responden a incidentes de manera más eficiente. Los sistemas basados en AI pueden analizar datos en tiempo real para identificar riesgos potenciales y activar protocolos de emergencia automáticamente, reduciendo significativamente el tiempo de respuesta y minimizando el impacto de las interrupciones.
+                                        </p>
+                                        <p>
+                                            Además, la AI facilita la simulación de escenarios de desastre, permitiendo a las empresas probar y mejorar sus planes de continuidad de manera continua. Esto garantiza que las organizaciones estén mejor preparadas para enfrentar cualquier tipo de crisis, asegurando la resiliencia operativa y la confianza de sus stakeholders.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Puedes añadir más artículos siguiendo la misma estructura -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center py-3">
+            <div class="container">
+                <p>&copy; 2024 RiskHub. Todos los derechos reservados.</p>
+                <a href="#" class="text-light mx-2">Política de Privacidad</a> | 
+                <a href="#" class="text-light mx-2">Términos de Servicio</a>
+            </div>
+        </footer>
+
+        <!-- Modal para el Consultor -->
+        <div class="modal fade" id="consultorModal" tabindex="-1" aria-labelledby="consultorModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="consultorModalLabel">Consultor de RiskHub</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="chat-container">
+                            <!-- Mensajes del chat aparecerán aquí -->
+                        </div>
+                        <div class="input-group mt-3">
+                            <input type="text" class="form-control" id="user-input" placeholder="Escribe tu consulta..." aria-label="Consulta">
+                            <button class="btn btn-primary" type="button" id="send-button">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script src="../js/chatbotfake.js"></script>
+    </body>
+</html>

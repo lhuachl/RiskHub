@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+        <hea<!doctype html>
+            <html lang="es">
+                <head>
+                    <title>RiskHub - Certificaciones</title>
+                    <meta charset="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            
+                    <!-- Bootstrap CSS v5.3.2 -->
+                    <link
+                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+                        rel="stylesheet"
+                        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                        crossorigin="anonymous"
+                    />
+                    <link
+                        rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+                    />
+                    <link rel="stylesheet" href="../css/styles.css">
+                    <style>
+                        /* Estilos específicos para la página de certificaciones */
+                        body {
+                            background-color: #1C1C1C;
+                            color: #E0E0E0;
+                            font-family: 'Poppins', sans-serif;
+                            transition: background-color 0.5s, color 0.5s;
+                        }
+            
+                        .navbar, footer {
+                            background-color: #2F2F2F !important;
+                        }
+            
+                        .section-title {
+                            text-align: center;
+                            margin-bottom: 2rem;
+                            color: #D3D3D3;
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+            
+                        .certificacion-card {
+                            background-color: #2F2F2F;
+                            border-radius: 5px;
+                            padding: 1.5rem;
+                            margin-bottom: 1.5rem;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                        }
+            
+                        .certificacion-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 0 15px #A9A9A9, 0 0 30px #808080, 0 0 45px #696969;
+                        }
+            
+                        .certificacion-card img {
+                            max-width: 100px;
+                            margin-bottom: 1rem;
+                        }
+            
+                        .certificacion-card h5 {
+                            color: #D3D3D3;
+                            margin-bottom: 1rem;
+                        }
+            
+                        .certificacion-card p {
+                            color: #E0E0E0;
+                        }
+            
+                        .btn-vermas {
+                            background-color: #5A5A5A;
+                            border-color: #5A5A5A;
+                            color: #D3D3D3;
+                            transition: background-color 0.3s, color 0.3s;
+                        }
+            
+                        .btn-vermas:hover {
+                            background-color: #696969;
+                            border-color: #696969;
+                            color: #fff;
+                        }
+            
+                        /* Estilos para la sección de Clientes */
+                        .clientes-section {
+                            background-color: #1C1C1C;
+                            padding: 4rem 0;
+                            animation: fadeIn 1s ease-in-out;
+                        }
+            
+                        .clientes-section h2 {
+                            text-align: center;
+                            margin-bottom: 3rem;
+                            color: #ADD8E6; /* Celeste Hielo para resaltar el título */
+                        }
+            
+                        .clientes-logos img {
+                            max-width: 150px;
+                            margin: 1rem;
+                            transition: transform 0.3s, box-shadow 0.3s;
+                        }
+            
+                        .clientes-logos img:hover {
+                            transform: scale(1.05);
+                            box-shadow: 0 0 10px #ADD8E6;
+                        }
+            
+                        /* Animaciones */
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(20px); }
+                            to { opacity: 1; transform: translateY(0); }
+                        }
+            
+                        /* Estilos para resaltar puntos clave */
+                        .highlight {
+                            color: #ADD8E6;
+                            font-weight: bold;
+                        }
+            
+                        /* Estilos para el botón del consultor */
+                        .btn-consultor {
+                            background-color: #ADD8E6; /* Celeste Hielo */
+                            border-color: #ADD8E6;
+                            color: #1C1C1C;
+                            font-size: 1.2rem;
+                            padding: 0.75rem 1.5rem;
+                            animation: pulse 2s infinite;
+                            transition: transform 0.3s, background-color 0.3s;
+                            border-radius: 50px; /* Botón más redondeado */
+                            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                        }
+            
+                        .btn-consultor:hover {
+                            transform: scale(1.05);
+                            background-color: #87CEEB; /* Azul Cielo más intenso */
+                        }
+            
+                        @keyframes pulse {
+                            0% { transform: scale(1); }
+                            50% { transform: scale(1.05); }
+                            100% { transform: scale(1); }
+                        }
+            
+                        /* Estilos para el chat */
+                        #chat-container {
+                            height: 400px;
+                            overflow-y: scroll;
+                            border: 1px solid #444;
+                            padding: 1rem;
+                            border-radius: 5px;
+                            background-color: #2F2F2F;
+                        }
+            
+                        #chat-container div {
+                            margin-bottom: 1rem;
+                        }
+            
+                        #chat-container strong {
+                            color: #ADD8E6; /* Celeste Hielo para el consultor */
+                        }
+            
+                        #chat-container span {
+                            color: #E0E0E0;
+                        }
+            
+                        /* Estilos para el input y botón */
+                        .input-group input {
+                            background-color: #3A3A3A;
+                            border: 1px solid #555;
+                            color: #E0E0E0;
+                            border-radius: 5px;
+                        }
+            
+                        .input-group input::placeholder {
+                            color: #AAA;
+                        }
+            
+                        .input-group .btn-primary {
+                            background-color: #ADD8E6;
+                            border-color: #ADD8E6;
+                            color: #1C1C1C;
+                            transition: background-color 0.3s, transform 0.3s;
+                        }
+            
+                        .input-group .btn-primary:hover {
+                            background-color: #87CEEB;
+                            transform: scale(1.05);
+                        }
+                    </style>
+                </head>
+            
+                <body>
+                    <header>
+                        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="../index.html">
+                                    <img src="../recursos/logo riskhub _ (1).png" alt="RiskHub" height="60px" />
+                                </a>
+                                <button
+                                    class="navbar-toggler"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav"
+                                    aria-expanded="false"
+                                    aria-label="Toggle navigation"
+                                >
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../index.html">Inicio</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#quienes-somos">Quiénes Somos</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="../html/servicios.html">Servicios</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#metodologia">Metodología</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#partners">Partners</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="../html/certificaciones.html">Certificaciones</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="btn btn-primary" href="../index.html">Contáctanos</a>
+                                        </li>
+                                    </ul>
+                                    <a href="https://www.linkedin.com" target="_blank" class="text-light ms-3">
+                                        <i class="bi bi-linkedin" style="font-size: 1.5rem;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- Botón "Pruebe nuestro Consultor" -->
+                        <div class="container-fluid text-end mt-2">
+                            <button type="button" class="btn btn-consultor" data-bs-toggle="modal" data-bs-target="#consultorModal">
+                                Pruebe nuestro Consultor
+                            </button>
+                        </div>
+                    </header>
+            
+                    <main>
+                        <!-- Hero Section -->
+                        <section class="hero text-center py-5">
+                            <div class="container">
+                                <h1 class="display-4">Certificaciones</h1>
+                                <p class="lead">
+                                    Descubre nuestras certificaciones internacionales y conoce cómo hemos atendido a varios bancos en toda Bolivia.
+                                </p>
+                            </div>
+                        </section>
+            
+                        <!-- Sección de Certificaciones Internacionales -->
+                        <section class="py-5">
+                            <div class="container">
+                                <h2 class="section-title">Certificaciones Internacionales</h2>
+                                <div class="row">
+                                    <!-- Certificación 1 -->
+                                    <div class="col-md-4">
+                                        <div class="certificacion-card">
+                                            <img src="../recursos/certificacion1.png" alt="Certificación ISO 27001">
+                                            <h5>ISO/IEC 27001 Lead Auditor</h5>
+                                            <p>
+                                                Certificación que habilita la realización de auditorías exhaustivas en sistemas de gestión de seguridad de la información, asegurando el cumplimiento con los estándares internacionales más exigentes.
+                                            </p>
+                                            <a href="#" class="btn btn-vermas" data-bs-toggle="modal" data-bs-target="#certModal1">Ver más</a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal para Certificación 1 -->
+                                    <div class="modal fade" id="certModal1" tabindex="-1" aria-labelledby="certModal1Label" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content bg-dark text-light">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="certModal1Label">ISO/IEC 27001 Lead Auditor</h5>
+                                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        La certificación ISO/IEC 27001 Lead Auditor permite a los profesionales realizar auditorías exhaustivas en sistemas de gestión de seguridad de la información. Esta certificación asegura que las organizaciones cumplen con los estándares internacionales más rigurosos, garantizando la protección de los activos de información críticos.
+                                                    </p>
+                                                    <p>
+                                                        Los auditores certificados son capaces de evaluar, identificar, revisar y recomendar mejoras en las políticas de seguridad, asegurando una mejora continua en la gestión de riesgos y la protección de datos sensibles.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Certificación 2 -->
+                                    <div class="col-md-4">
+                                        <div class="certificacion-card">
+                                            <img src="../recursos/certificacion2.png" alt="Certificación ISO 22301">
+                                            <h5>ISO/IEC 22301 Lead Implementor</h5>
+                                            <p>
+                                                Especialización en la implementación de sistemas de gestión de continuidad del negocio, asegurando que las operaciones críticas se mantengan activas ante cualquier contingencia.
+                                            </p>
+                                            <a href="#" class="btn btn-vermas" data-bs-toggle="modal" data-bs-target="#certModal2">Ver más</a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal para Certificación 2 -->
+                                    <div class="modal fade" id="certModal2" tabindex="-1" aria-labelledby="certModal2Label" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content bg-dark text-light">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="certModal2Label">ISO/IEC 22301 Lead Implementor</h5>
+                                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        La certificación ISO/IEC 22301 Lead Implementor capacita a los profesionales para liderar la implementación de sistemas de gestión de continuidad del negocio. Esta certificación asegura que las organizaciones están preparadas para enfrentar y mitigar cualquier interrupción, garantizando la resiliencia operativa y la continuidad de las operaciones críticas.
+                                                    </p>
+                                                    <p>
+                                                        Los implementadores certificados son responsables de diseñar, desarrollar e implementar planes de contingencia efectivos, gestionando el impacto corporativo y promoviendo una cultura de mejora continua en la gestión de riesgos.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Certificación 3 -->
+                                    <div class="col-md-4">
+                                        <div class="certificacion-card">
+                                            <img src="../recursos/certificacion3.png" alt="Certificación CompTIA Security+">
+                                            <h5>CompTIA Security+</h5>
+                                            <p>
+                                                Ofrece un conocimiento fundamental en seguridad de redes, criptografía, gestión de identidades y mitigación de amenazas, cubriendo las áreas críticas de la seguridad informática.
+                                            </p>
+                                            <a href="#" class="btn btn-vermas" data-bs-toggle="modal" data-bs-target="#certModal3">Ver más</a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal para Certificación 3 -->
+                                    <div class="modal fade" id="certModal3" tabindex="-1" aria-labelledby="certModal3Label" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content bg-dark text-light">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="certModal3Label">CompTIA Security+</h5>
+                                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        La certificación CompTIA Security+ proporciona un conocimiento fundamental en diversos aspectos de la seguridad informática, incluyendo seguridad de redes, criptografía, gestión de identidades y mitigación de amenazas. Esta certificación es ideal para profesionales que buscan establecer una base sólida en ciberseguridad y avanzar en sus carreras en el campo.
+                                                    </p>
+                                                    <p>
+                                                        Los certificados en Security+ están capacitados para identificar y gestionar riesgos de seguridad, implementar soluciones efectivas y asegurar la protección de los activos de información críticos de las organizaciones.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Certificación 4 -->
+                                    <div class="col-md-4">
+                                        <div class="certificacion-card">
+                                            <img src="../recursos/certificacion4.png" alt="Certificación CEH">
+                                            <h5>Certified Ethical Hacker (CEH)</h5>
+                                            <p>
+                                                Habilita para identificar vulnerabilidades utilizando las técnicas y herramientas de los atacantes reales, contribuyendo a la prevención de ciberataques mediante la detección proactiva de puntos débiles.
+                                            </p>
+                                            <a href="#" class="btn btn-vermas" data-bs-toggle="modal" data-bs-target="#certModal4">Ver más</a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal para Certificación 4 -->
+                                    <div class="modal fade" id="certModal4" tabindex="-1" aria-labelledby="certModal4Label" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content bg-dark text-light">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="certModal4Label">Certified Ethical Hacker (CEH)</h5>
+                                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        La certificación Certified Ethical Hacker (CEH) capacita a los profesionales para identificar y explotar vulnerabilidades en sistemas informáticos utilizando las mismas técnicas y herramientas que los atacantes maliciosos. Esta certificación es esencial para aquellos que buscan fortalecer la seguridad de las organizaciones mediante la detección proactiva de puntos débiles.
+                                                    </p>
+                                                    <p>
+                                                        Los profesionales certificados en CEH están equipados para realizar pruebas de penetración, evaluar la postura de seguridad y recomendar mejoras efectivas para mitigar riesgos y proteger los activos de información críticos.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Certificación 5 -->
+                                    <div class="col-md-4">
+                                        <div class="certificacion-card">
+                                            <img src="../recursos/certificacion5.png" alt="Certificación ISO 31000">
+                                            <h5>ISO 31000 - Gestión de Riesgos</h5>
+                                            <p>
+                                                Certificación que proporciona dominio sobre los principios y guías internacionales para la identificación, evaluación y tratamiento de riesgos, fomentando una gestión eficaz del riesgo organizacional.
+                                            </p>
+                                            <a href="#" class="btn btn-vermas" data-bs-toggle="modal" data-bs-target="#certModal5">Ver más</a>
+                                        </div>
+                                    </div>
+                                    <!-- Modal para Certificación 5 -->
+                                    <div class="modal fade" id="certModal5" tabindex="-1" aria-labelledby="certModal5Label" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content bg-dark text-light">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="certModal5Label">ISO 31000 - Gestión de Riesgos</h5>
+                                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>
+                                                        La certificación ISO 31000 proporciona un marco integral para la gestión de riesgos, permitiendo a las organizaciones identificar, evaluar y tratar los riesgos de manera efectiva. Esta certificación es crucial para asegurar que las empresas adoptan un enfoque sistemático y proactivo en la gestión de riesgos, mejorando su resiliencia y capacidad para enfrentar incertidumbres.
+                                                    </p>
+                                                    <p>
+                                                        Los profesionales certificados en ISO 31000 están capacitados para implementar políticas de gestión de riesgos, integrar la gestión de riesgos en la cultura organizacional y asegurar la toma de decisiones informada y estratégica.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Puedes añadir más certificaciones siguiendo la misma estructura -->
+                                </div>
+                            </div>
+                        </section>
+            
+                        <!-- Sección de Clientes (Bancos en Bolivia) -->
+                        <section class="clientes-section">
+                            </div>
+                        </section>
+                    </main>
+            
+                    <footer class="text-center py-3">
+                        <div class="container">
+                            <p>&copy; 2024 RiskHub. Todos los derechos reservados.</p>
+                            <a href="#" class="text-light mx-2">Política de Privacidad</a> | 
+                            <a href="#" class="text-light mx-2">Términos de Servicio</a>
+                        </div>
+                    </footer>
+            
+                    <!-- Modal para el Consultor -->
+                    <div class="modal fade" id="consultorModal" tabindex="-1" aria-labelledby="consultorModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content bg-dark text-light">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="consultorModalLabel">Consultor de RiskHub</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="chat-container">
+                                        <!-- Mensajes del chat aparecerán aquí -->
+                                    </div>
+                                    <div class="input-group mt-3">
+                                        <input type="text" class="form-control" id="user-input" placeholder="Escribe tu consulta..." aria-label="Consulta">
+                                        <button class="btn btn-primary" type="button" id="send-button">Enviar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Bootstrap JavaScript Libraries -->
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                        crossorigin="anonymous"
+                    ></script>
+                    <script
+                        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                        crossorigin="anonymous"
+                    ></script>
+                    <script src="../js/chatbotfake.js"></script>
+                </body>
+            </html>
+            der>
+            <!-- place navbar here -->
+        </header>
+        <main></main>
+        <footer>
+            <!-- place footer here -->
+        </footer>
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
